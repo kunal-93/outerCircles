@@ -22,6 +22,25 @@ body {
 	margin-top: 1em;
 }
 
+.card-img{
+	grid-area: image;
+}
+
+.card-content{
+	grid-area: content;
+}
+.card-footer{
+	grid-area: footer;
+}
+.card-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+    "image content"
+    "footer footer";
+
+}
+
 @media(max-width:48em){
 	.footer{
 		display: grid;
@@ -31,5 +50,13 @@ body {
 
 	.footer .navbar{
 		display: inline-block;
+	}
+
+	.card-grid{
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"image"
+		"content"
+		"footer";
 	}
 }
