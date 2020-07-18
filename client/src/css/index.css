@@ -33,3 +33,9 @@ body {
 		display: inline-block;
 	}
 }
+
+.article 
+{
+	width:90%;
+	margin: 0 auto; 
+}
