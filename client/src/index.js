@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Greeting from "./js/components/Greeting";
+import Homepage from "./js/pages/homepage/Homepage";
 import './css/index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 	return (
         <div>
-            <Greeting name="World" time="12pm"/>
-            <Greeting name="P" time="1pm" />
+            <Homepage/>
         </div>
     )
     
