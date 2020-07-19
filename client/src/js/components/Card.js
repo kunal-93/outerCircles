@@ -3,7 +3,7 @@ import {Card} from "react-bootstrap";
 import {classNames} from "js/helpers/utilities";
 
 const CardCustom = ({variant="default"}) => {
-    const cardStyle = variant === "small" ? "card-grid-small" : "card-grid"
+    const cardStyle = variant === "wide" ? "card-grid-wide" : "card-grid"
     
     return (
         <Card className={classNames(cardStyle, "shadow-sm")}>

@@ -1,17 +1,16 @@
 .main{
     display: grid;
-    grid-template-columns: 2fr 1fr;
     gap: 1em;
 }
 
 /* Tablet size */
-@media(max-width:75em){
-	.main{
-        grid-template-columns: 1fr;
-    }
+@media(min-width:48em){
+	
 }
 
-/* Mobile size */
-@media(max-width:48em){
-	
+/* Laptop size */
+@media(min-width:64em){
+	.main{
+        grid-template-columns: 2fr 1fr;
+    }
 }

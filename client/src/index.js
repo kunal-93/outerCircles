@@ -1,16 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Homepage from "./js/pages/homepage/Homepage";
 
+// CSS Imports
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/index.css';
 import './css/homepage.css';
 
+// Router Imports
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+// Component Imports
+import Header from "components/Header";
+import Footer from "components/Footer";
+
+// Page Imports
+import Homepage from "./js/pages/homepage/Homepage";
+import HomePage from "./js/pages/homepage/Homepage";
+
+const Page = Main =>{
+    return ({...props}) => {
+        return (
+            <>
+                <Header />
+                <Main {...props}/>
+                <Footer />
+            </>
+        )
+    }
+}
 const App = () => {
 	return (
-        <div>
-            <Homepage/>
-        </div>
+        <Router>
+            <Switch>
+                <Route exact path="/" component={Page(HomePage)} />
+            </Switch>
+        </Router>
     )
     
 }

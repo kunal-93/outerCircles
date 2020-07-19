@@ -6,25 +6,19 @@ import Card from "components/Card";
 
 const HomePage = () => {
     return (
-        <>
-            <Header />
-            <main className="main">
-                <section>
-                    {/* <div className="container-fluid shadow-sm"> */}
-                        <Carousel />
-                    {/* </div> */}
-                    <Card />
-                    <Card />
-                    <Card />
-                </section>
-                <section>
-                    <Card variant="small" />
-                    <Card variant="small" />
-                    <Card variant="small" />
-                </section>
-            </main>
-            <Footer />
-        </>
+        <main className="main">
+            <section>
+                <Carousel />
+                <Card variant="wide" />
+                <Card variant="wide"/>
+                <Card variant="wide"/>
+            </section>
+            <section>
+                <Card />
+                <Card />
+                <Card />
+            </section>
+        </main>
     )
 }
 
