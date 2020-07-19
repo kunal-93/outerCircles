@@ -3,7 +3,7 @@
 }
 body {
 	margin: 0;
-	background-color: lightgrey;
+	background-color: whitesmoke;
 	font: 1em helvetica, arial, sans-serif;
 }
 
@@ -28,19 +28,32 @@ body {
 
 .card-content{
 	grid-area: content;
+	display: grid;
+	grid-template-rows: 3fr 1fr;
+}
+
+.card-content-links{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 .card-footer{
 	grid-area: footer;
 }
 .card-grid{
+	margin: 1em;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 
     "image content"
     "footer footer";
-
 }
 
+.card-grid-small{
+	margin: 1em;
+}
+
+/* Mobile size */
 @media(max-width:48em){
 	.footer{
 		display: grid;

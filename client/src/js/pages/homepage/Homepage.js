@@ -10,14 +10,18 @@ const HomePage = () => {
             <Header />
             <main className="main">
                 <section>
-                    <div className="container-fluid shadow-sm">
+                    {/* <div className="container-fluid shadow-sm"> */}
                         <Carousel />
-                    </div>
+                    {/* </div> */}
+                    <Card />
+                    <Card />
                     <Card />
                 </section>
-                <aside>
-                    <h2>Side bar</h2>
-                </aside>
+                <section>
+                    <Card variant="small" />
+                    <Card variant="small" />
+                    <Card variant="small" />
+                </section>
             </main>
             <Footer />
         </>

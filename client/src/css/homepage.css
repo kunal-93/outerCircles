@@ -1,5 +1,17 @@
 .main{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 2em;
+    gap: 1em;
+}
+
+/* Tablet size */
+@media(max-width:75em){
+	.main{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile size */
+@media(max-width:48em){
+	
 }

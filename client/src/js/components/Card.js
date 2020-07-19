@@ -1,9 +1,12 @@
 import React from "react";
 import {Card} from "react-bootstrap";
+import {classNames} from "js/helpers/utilities";
 
-const CardCustom = () => {
+const CardCustom = ({variant="default"}) => {
+    const cardStyle = variant === "small" ? "card-grid-small" : "card-grid"
+    
     return (
-        <Card className="card-grid shadow-sm">
+        <Card className={classNames(cardStyle, "shadow-sm")}>
             <Card.Img className="card-img" variant="top" src="src/img/Covid.jpg" />
             <div className="card-content">
                 <Card.Body>
@@ -13,9 +16,9 @@ const CardCustom = () => {
                     the card's content.
                     </Card.Text>
                 </Card.Body>
-                <Card.Body>
-                    <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
+                <Card.Body className="card-content-links">
+                    <Card.Link href="#">Read More</Card.Link>
+                    <Card.Link href="#">Other links</Card.Link>
                 </Card.Body>
             </div>
             <Card.Footer className="card-footer">2 Days ago</Card.Footer>
