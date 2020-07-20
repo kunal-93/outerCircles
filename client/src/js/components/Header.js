@@ -38,13 +38,17 @@ const Header = () => {
             </Navbar>
             {/* SignUp Panel */}
             <SignUp
+                title="Join Us"
                 show={showSignUpPanel}
                 onHide={() => setSignUpPanelShow(false)}
+                setModalShow = {setSignUpPanelShow}
             />
             {/* SignIn Panel */}
             <SignIn
+                title="Welcome Back"
                 show={showSignInPanel}
                 onHide={() => setSignInPanelShow(false)}
+                setModalShow = {setSignInPanelShow}
             />
         </header>
     )
