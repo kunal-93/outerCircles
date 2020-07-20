@@ -40,14 +40,29 @@ OuterCircles is a modern blogging and news web application that allows users rea
 ![Login](./screenshots/signIn.png)
 
 ## Landing Page
+<kbd>
 ![Landing Page](./screenshots/home1.png)
+</kbd>
+<kbd>
 ![Landing Page](./screenshots/home2.png)
+</kbd>
+<kbd>
 ![Landing Page](./screenshots/home3.png)
+</kbd>
 
 ## Responsive Design
+<kbd>
 ![Responsive design](./screenshots/mobile-home1.png)
+</kbd>
+<kbd>
 ![Responsive design](./screenshots/mobile-home2.png)
+</kbd>
+<kbd>
 ![Responsive design](./screenshots/mobile-home3.png)
+</kbd>
+<kbd>
+![Responsive design](./screenshots/mobile-home4.png)
+</kbd>
 
 Installation
 ------------
