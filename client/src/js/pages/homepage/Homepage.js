@@ -1,16 +1,24 @@
 import React from "react";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import Carousel from "components/Carousel";
+import Card from "components/Card";
 
 const HomePage = () => {
     return (
-        <>
-            <Header />
+        <main className="main">
             <section>
-                <h1>This is the main content</h1>
+                <Carousel />
+                <Card variant="wide" />
+                <Card variant="wide"/>
+                <Card variant="wide"/>
             </section>
-            <Footer />
-        </>
+            <section>
+                <Card />
+                <Card />
+                <Card />
+            </section>
+        </main>
     )
 }
 
