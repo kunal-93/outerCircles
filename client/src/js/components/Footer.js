@@ -20,7 +20,7 @@ const Footer = () => {
                 <Form.Group as={Col} controlId="formGridMessage">
                     <Form.Control as="textarea" placeholder="Your message" />
                 </Form.Group>
-
+                <Button variant="primary" type="submit">Submit</Button>
             </Form>
                    
             <Navbar variant="dark">

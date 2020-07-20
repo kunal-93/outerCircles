@@ -14,7 +14,6 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 
 // Page Imports
-import Homepage from "./js/pages/homepage/Homepage";
 import HomePage from "./js/pages/homepage/Homepage";
 
 const Page = Main =>{
@@ -33,6 +32,8 @@ const App = () => {
         <Router>
             <Switch>
                 <Route exact path="/" component={Page(HomePage)} />
+                <Route exact path="/sign-up" component={Page(HomePage)} />
+                <Route exact path="/sign-in" component={Page(HomePage)} />
             </Switch>
         </Router>
     )
