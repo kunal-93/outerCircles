@@ -53,6 +53,11 @@ body {
 	margin: 1em;
 }
 
+.blur-background{
+	backdrop-filter: blur(3px);
+    background-color: rgba(0,0,0, 0.2);
+}
+
 /* Tablet size */
 @media(min-width:48em){
 	
