@@ -14,7 +14,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 
 // Page Imports
-import HomePage from "./js/pages/homepage/Homepage";
+import ExplorePage from "./js/pages/explore/ExplorePage";
 
 const Page = Main =>{
     return ({...props}) => {
@@ -27,13 +27,13 @@ const Page = Main =>{
         )
     }
 }
+
 const App = () => {
 	return (
         <Router>
             <Switch>
-                <Route exact path="/" component={Page(HomePage)} />
-                <Route exact path="/sign-up" component={Page(HomePage)} />
-                <Route exact path="/sign-in" component={Page(HomePage)} />
+                <Route exact path="/" component={Page(ExplorePage)} />
+                <Route exact path="/explore" component={Page(ExplorePage)} />
             </Switch>
         </Router>
     )

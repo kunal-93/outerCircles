@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "components/Carousel";
 import Card from "components/Card";
 
-const HomePage = () => {
+const ExplorePage = () => {
     return (
         <main className="main">
             <section>
@@ -18,4 +18,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage;
+export default ExplorePage;
