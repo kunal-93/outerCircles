@@ -1,5 +1,5 @@
-Airbnb-App Clone
-================
+OuterCircles (News and blogs)
+=============================
 
 **_Contents:_**
 - [About](#about)
