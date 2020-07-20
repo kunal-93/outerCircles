@@ -11,7 +11,7 @@ OuterCircles (News and blogs)
 OuterCircles is a modern blogging and news web application that allows users read and write on their favourite topics. This web app is inspired from Medium.com aims to implement its the features.
 
 **Technology Stack**
-- *Front End*: React/Redux
+- *Front End*: React/Redux, Bootstrap
 - *Back End*: Node, Express, MongoDB on the cloud, SendGrid for Emails, Twilio for text messaging
 - *Live API Documentation*: Swagger
 
