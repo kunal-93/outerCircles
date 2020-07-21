@@ -8,8 +8,8 @@ import {articleGridModel} from "models/articleGridModel";
 import {aboutModel} from "models/aboutModel";
 
 const HomePage = () => {
-    const articleGridModel = articleGridModel;
-    const aboutModel = aboutModel;
+    const articleGridModel = {articleGridModel};
+    const aboutModel = {aboutModel};
     return (
     <div>
         { /* <!-- Masthead--> */ }
