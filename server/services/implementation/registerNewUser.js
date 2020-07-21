@@ -18,7 +18,7 @@ const registerNewUser = (req, res) => {
     .catch(err => {
         res.statusMessage = "Account already exists";
         res.status(400);
-        res.send(err);
+        res.send();
     }) 
 }
 
