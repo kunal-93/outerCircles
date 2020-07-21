@@ -33,7 +33,8 @@ module.exports = {
 			components: path.resolve(__dirname, 'src/js/components'),
 			css: path.resolve(__dirname, 'src/css/'),
 			img: path.resolve(__dirname, 'src/img/'),
-			js: path.resolve(__dirname, 'src/js/')	
+			js: path.resolve(__dirname, 'src/js/'),
+			models: path.resolve(__dirname, 'src/js/models')
 		}
 	},
 };

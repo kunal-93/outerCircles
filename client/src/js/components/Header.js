@@ -5,6 +5,7 @@ import {NavDropdown} from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
+import {Link} from "react-router-dom";
 
 const Header = () => {
 
@@ -19,7 +20,8 @@ const Header = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="#features">Home</Nav.Link>
-                        <Nav.Link href="#pricing">Popular</Nav.Link>
+                        {/* <Nav.Link href="/explore">Explore</Nav.Link> */}
+                        <Link to="/explore">Explore</Link>
                         <NavDropdown title="More" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Trending</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Technology</NavDropdown.Item>
@@ -38,17 +40,13 @@ const Header = () => {
             </Navbar>
             {/* SignUp Panel */}
             <SignUp
-                title="Join Us"
                 show={showSignUpPanel}
                 onHide={() => setSignUpPanelShow(false)}
-                setModalShow = {setSignUpPanelShow}
             />
             {/* SignIn Panel */}
             <SignIn
-                title="Welcome Back"
                 show={showSignInPanel}
                 onHide={() => setSignInPanelShow(false)}
-                setModalShow = {setSignInPanelShow}
             />
         </header>
     )

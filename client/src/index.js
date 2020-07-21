@@ -4,7 +4,6 @@ import ReactDOM from "react-dom";
 // CSS Imports
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/index.css';
-import './css/homepage.css';
 
 // Router Imports
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -14,6 +13,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 
 // Page Imports
+import HomePage from "./js/pages/homePage/HomePage";
 import ExplorePage from "./js/pages/explore/ExplorePage";
 
 const Page = Main =>{
@@ -22,8 +22,8 @@ const Page = Main =>{
             <>
                 <Header />
                 <Main {...props}/>
-                <Footer />
-            </>
+                <Footer /> 
+            </> 
         )
     }
 }
@@ -32,7 +32,7 @@ const App = () => {
 	return (
         <Router>
             <Switch>
-                <Route exact path="/" component={Page(ExplorePage)} />
+                <Route exact path="/" component={Page(HomePage)} />
                 <Route exact path="/explore" component={Page(ExplorePage)} />
             </Switch>
         </Router>
