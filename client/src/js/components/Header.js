@@ -1,28 +1,56 @@
 import React, {useState} from "react";
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import {NavDropdown} from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
+import SignUp from "./SignUp";
+import SignIn from "./SignIn";
+import {Link} from "react-router-dom";
 
 const Header = () => {
+
+    const [showSignUpPanel, setSignUpPanelShow] = useState(false);
+    const [showSignInPanel, setSignInPanelShow] = useState(false);
+
     return (
-    <header>
-     { /* <!-- Navigation Header --> */ }
-        <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div className="container">
-                <a className="navbar-brand js-scroll-trigger" href="#page-top"><img src="src/img/logo.JPG" alt="" /></a>
-                <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i className="fa fa-bars ml-1"></i>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarResponsive">
-                    <ul className="navbar-nav text-uppercase ml-auto">
-                        <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                        <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                        <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+        <header>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Navbar.Brand href="#home">Outer Circles</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="#features">Home</Nav.Link>
+                        {/* <Nav.Link href="/explore">Explore</Nav.Link> */}
+                        <Link to="/explore">Explore</Link>
+                        <NavDropdown title="More" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Trending</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Technology</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Health</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                    <Nav>
+                        <Button className="nav-link text-left" variant="link" >Write</Button>
+                        <Button className="nav-link text-left" variant="link" 
+                            onClick={() => setSignInPanelShow(true)}>
+                                Sign In
+                        </Button>                    
+                        <Button variant="light" onClick={() => setSignUpPanelShow(true)}>Get started</Button>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+            {/* SignUp Panel */}
+            <SignUp
+                show={showSignUpPanel}
+                onHide={() => setSignUpPanelShow(false)}
+            />
+            {/* SignIn Panel */}
+            <SignIn
+                show={showSignInPanel}
+                onHide={() => setSignInPanelShow(false)}
+            />
+        </header>
     )
 }
-export default Header
+
+
+export default Header;
