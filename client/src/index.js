@@ -13,6 +13,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 
 // Page Imports
+import HomePage from "./js/pages/homePage/HomePage";
 import ExplorePage from "./js/pages/explore/ExplorePage";
 
 const Page = Main =>{
@@ -31,7 +32,7 @@ const App = () => {
 	return (
         <Router>
             <Switch>
-                <Route exact path="/" component={Page(ExplorePage)} />
+                <Route exact path="/" component={Page(HomePage)} />
                 <Route exact path="/explore" component={Page(ExplorePage)} />
             </Switch>
         </Router>
