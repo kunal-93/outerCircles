@@ -1,9 +1,13 @@
-import React from "react";
+import React,{useState} from "react";
 import {Button, Form, Col, InputGroup} from "react-bootstrap";
-import Modal from "./Modal";
-
 import { Formik } from "formik";
 import * as yup from "yup";
+
+// Component Imports
+import Modal from "./Modal";
+
+//Helpers imports
+import {signUp} from "../helpers/api/user";
 
 const schema = yup.object({
   firstName: yup.string().required('First name is required'),
@@ -26,13 +30,27 @@ const schema = yup.object({
     })
 });
 
-const SignUp = ({setModalShow}) => {
+const SignUp = ({setModalShow, setStatus, setModalFooterText}) => {
 
-  const onValidatedHandler = (data) => {
-    // close the model
-    setModalShow(false);
-    console.log("data validated");
-    console.log(data);
+  const onValidatedHandler = data => {
+    
+    signUp(data)
+      .then((response)=>{
+        console.dir(response);
+        console.log(`received : ${response.statusCode}`);
+        if(response.statusCode === 400){
+          setStatus('danger');
+          setModalFooterText(response.statusText);
+        }
+        else{
+          setStatus('success');
+          setModalFooterText("Account created successfully");
+          // close the model after 1 sec
+          setTimeout(()=>{
+            setModalShow(false);
+          }, 1000)
+        }
+      })
   }
 
   return (
@@ -44,7 +62,8 @@ const SignUp = ({setModalShow}) => {
         lastName: '',
         email: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        dbError: ''
       }}
     >
       {({
@@ -121,7 +140,7 @@ const SignUp = ({setModalShow}) => {
             <Form.Control.Feedback type="invalid">{errors.confirmPassword}</Form.Control.Feedback>
 
           </Form.Group>
-          
+  
           <Button variant="primary" type="submit">Submit</Button>
         </Form>
         )}
