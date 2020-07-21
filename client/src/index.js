@@ -3,14 +3,14 @@ import ReactDOM from "react-dom";
 
 // CSS Imports
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/main.css';
+import './css/index.css';
 
 // Router Imports
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 // Component Imports
-//import Header from "components/Header";
-// import Footer from "components/Footer";
+import Header from "components/Header";
+import Footer from "components/Footer";
 
 // Page Imports
 import HomePage from "./js/pages/homepage/Homepage";
@@ -18,12 +18,11 @@ import HomePage from "./js/pages/homepage/Homepage";
 const Page = Main =>{
     return ({...props}) => {
         return (
-            <HomePage />
-           /* <>
+            <>
                 <Header />
                 <Main {...props}/>
                 <Footer /> 
-            </> */
+            </> 
         )
     }
 }
